@@ -1,0 +1,988 @@
+/*
+Theme Name: Resource theme
+Theme URI: http://example.com/my-wordpress-theme
+Description: A custom WordPress theme with custom styles.
+Author: John Doe
+Author URI: http://example.com/johndoe
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: custom, wordpress-theme
+Text Domain: my-wordpress-theme
+*/
+
+
+/*------ css reset ------*/
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+
+
+
+
+silverstone
+
+/* ------------------- Root variables ------------------ */
+
+:root {
+  --primary-color1: #845DE0;
+  --primary-color2: #336AE9;
+  --accent-color1: #B092F6;
+  --accent-color2: #79ACFB;
+  --primary-dark-color: #333;
+  --secondary-dark-color: #717171;
+  --light-color: #fff;
+
+  --primary-font: "Montserrat", sans-serif;
+  --secondary-font: "Bai Jamjuree", sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-black: 900;
+
+  --font-size-12: .75rem;
+  --font-size-14: .875rem;
+  --font-size-16: 1rem;
+  --font-size-18: 1.125rem;
+  --font-size-24: 1.5rem;
+  --font-size-32: 2rem;
+  --font-size-48: 3rem;
+  --font-size-64: 4rem;
+  --font-size-80: 5rem;
+  --font-size-96: 6rem;
+
+}
+
+body {
+  margin: 0;
+}
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: var(--font-size-24);
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+
+
+.body-wrapper {
+  max-width: 1097px;
+  margin: auto;
+}
+
+.row-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.column-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.category-heading-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+/* ----------------- Navigations ------------------ */
+.nav-wrapper {
+  border-bottom: 1px solid #333333;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+}
+header .logo-container {
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding-left: 23px;
+  height: 40px;
+}
+header .logo-container img {
+  width: 40px;
+  height: 40px;
+}
+
+header .web-title {
+  margin-left: 19px;
+  display: flex;
+  flex-direction: column;
+}
+
+header .top-bar-nav {
+  list-style-type: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+  margin-top: 22px;
+  padding: 0px;
+}
+
+header .top-bar-nav li {
+
+}
+
+
+header .top-bar-nav li a {
+  color: var(--primary-dark-color);
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--font-size-16);
+}
+
+header .top-bar-nav li a:hover {
+  text-shadow: 0 0 .5px black;
+  
+
+}
+
+ li.current_page_item a {
+  font-weight:var(--font-weight-semi-bold);
+}
+
+header .search-bar {
+  display: flex;
+  justify-content: end;
+}
+header .search-bar img {
+  width: 24px;
+  height: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 34px;
+}
+
+/* ----------------- Resources Navigation ------------------ */
+.resource-menu {
+display:flex;
+justify-content: space-around;
+border: 1px solid #333333;
+background: #fff;
+filter: drop-shadow(7px 7px var(--accent-color2));
+border-radius: 13px;
+list-style-type: none;
+text-decoration: none;
+padding-top: 1rem;
+padding-bottom: 1rem;
+padding-inline: 1rem;
+}
+
+
+
+.resource-menu li a {
+  color: var(--primary-dark-color);
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--font-size-16);
+}
+
+.webdev-resource-menu {
+  filter: drop-shadow(7px 7px var(--accent-color1));
+}
+
+/* -------------------------------Resources section --------------------------------*/
+
+/* ------------------- Resource library Heading ------------------ */
+.resource-library-heading{
+  margin-top: 97px;
+  margin-bottom: 100px;
+}
+/* Heading for ux design */
+.resource-library-heading h1 {
+  font-size: var(--font-size-80);
+  font-weight: var(--font-weight-black);
+  color:var(--primary-color2);
+  margin-bottom: 45px;
+  margin-top: 0px;
+}
+/* Heading for web development */
+.webdev-resources-wrapper .resource-library-heading  h1{
+  color:var(--primary-color1);
+}
+.resource-library-heading h2 {
+  font-size: var(--font-size-48);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 20px;
+}
+.resource-library-heading h3 {
+  font-size: var(--font-size-24);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 24px;
+}
+.resource-library-heading p {
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-regular);
+  font-family: var(--secondary-font);
+}
+.resource-library-heading nav{
+  margin-bottom: 47px;
+}
+
+/* ------------------- Resource Slider Wrapper ------------------ */
+
+.resource-sliders-wrapper h3{
+  font-size: var(--font-size-24);
+  font-weight: var(--font-weight-bold);
+}
+.resource-sliders-wrapper hr{
+  margin-bottom: 20px;
+}
+
+.resource-row-wrapper{
+margin-bottom: 75px;
+}
+
+
+/* ------------------- Big Resource Slider ------------------ */
+.control-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.big-slider {
+  border: 1px solid #333333;
+  border-radius: 13px;
+  overflow: hidden;
+}
+.big-slide {
+  display: flex;
+}
+
+.big-slider img {
+  height: 539px;
+}
+
+.big-slider-content {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--font-size-16);
+  margin-left: 53px;
+  margin-right: 53px;
+  margin-top: 41px;
+}
+
+/* ------------------- Resource Card ------------------ */
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 259px;
+  min-height: 420px;
+  font-size: var(--font-size-14);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: var(--secondary-dark-color);
+}
+
+.card img {
+  max-width: 259px;
+  max-height: 247px;
+  min-width: 259px;
+  min-height: 247px;
+  border: 1px solid var(--primary-dark-color);
+  border-radius: 13px;
+  overflow: hidden;
+  margin-bottom: 23px;
+}
+
+.card h4 {
+  color: var(--primary-dark-color);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-18);
+
+}
+div.card p {
+  font-family: var(--secondary-font);
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-medium);
+}
+.card a{
+  position: relative;
+  margin-top: auto;
+  color:var(--primary-dark-color);
+  text-decoration: none;
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-bold);
+}
+
+.card a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-dark-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.card a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+
+/* ------------------ Big Swiper ------------------ */
+.swiper2 {
+  width: 100%;
+  height: 100%;
+}
+
+/* ------------------ Swiper ------------------ */
+
+/* NEEDS TO BE WORKED OUT */
+.counter-test {
+  font-family: "Montserrat", sans-serif;
+  margin-right: 6px;
+  margin-left: 6px;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  font-size: var(--font-size-18);
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide {
+  width: 25%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  padding: 0px;
+}
+
+
+/* ------------------ Home Section ------------------ */
+/* NEEDS TO BE WORKED OUT this css might need to be seperate not sure need to do research */
+
+.home-section h2 {
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.verticle-divider {
+  border-left: 1px solid #333;
+  height: 563px;
+}
+
+.landing-header-one {
+  /* display: flex; */
+  /* max-width: 1280px; */
+
+  margin-bottom: 35px;
+  padding-top: 180px;
+  width: 977px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 80px;
+  font-weight: 900;
+
+  color: var(--primary-dark-color);
+}
+
+.landing-header-two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 107px;
+}
+
+.landing-header-three {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+
+/* .row-wrapper{
+  justify-content: space-between;
+} */
+
+.hero {
+  width: 100%;
+  height: 775px;
+  display: flex;
+
+  background-color: #d7d8fc;
+
+  margin-bottom: 107px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-wrapper {
+  display: flex;
+  width: 1258px;
+}
+
+.hero img {
+  width: 444px;
+  align-self: center;
+  transform: translate(-200px, 100px);
+}
+.hero-subheading {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: var(--font-size-24);
+  max-width: 560px;
+
+  padding-bottom: 275px;
+}
+/* ------------------ Discover New Resouces Section ------------------ */
+
+.discover-new-resources h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 82px;
+}
+.discover-new-resources {
+  margin-bottom: 107px;
+}
+
+/* ------------------ UX Design Card ------------------ */
+.uxdesign-card {
+  display: flex;
+  align-self: start;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid var(--primary-dark-color);
+  filter: drop-shadow(14px 14px var(--accent-color2));
+  background-color: var(--light-color);
+  border-radius: 13px;
+  
+
+  padding-bottom: 56px;
+  width: 468px;
+}
+.uxdesign-card hr {
+  margin: 0px 50px;
+}
+
+.uxdesign-card ul {
+  font-size: var(--font-size-24);
+  font-weight: 500;
+  color: var(--primary-color2);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 70px;
+  /* margin: 0 px; */
+}
+
+.uxdesign-card:nth-child(3) {
+  filter: drop-shadow(14px 14px var(--accent-color1));
+}
+.uxdesign-card:nth-child(3) ul {
+  color: var(--primary-color1);
+}
+
+.uxdesign-card ul li {
+  margin-top: 40px;
+  transition-duration: .7s;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.uxdesign-card ul li:hover {
+  transform: translateY(-7px);
+  font-weight: var(--font-weight-bold);
+color : var(--primary-dark-color)
+}
+
+.uxdesign-card ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.uxdesign-card ul li i {
+  margin-right: 15px;
+}
+
+/* ------------------ End of UX Design Card ------------------ */
+
+/* ------------------ Prepare for your Career section ------------------ */
+.prepare-for-your-career {
+  margin-bottom: 162px;
+}
+
+/* gets the second prepare card */
+.prepare-for-your-career .row-wrapper:nth-child(2) {
+  margin-bottom: 72px;
+}
+
+.prepare-for-your-career h3 {
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 15px;
+  margin-top: 51px;
+}
+
+.prepare-for-your-career p {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: var(--font-size-24);
+  margin-bottom: 31px;
+  margin-top: 0px;
+  margin-right: 134px;
+}
+
+.prepare-for-your-career hr {
+  margin-bottom: 81px;
+}
+
+.prepare-for-your-career .sub-section {
+  display: flex;
+}
+
+
+
+button.primary-button {
+  
+  
+  position: relative;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: var(--light-color);
+  /* filter: drop-shadow(7px 7px #79ACFB); */
+  color: var(--primary-dark-color);
+  border: 1px solid var(--primary-dark-color);
+  border-radius: 13px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--font-size-16);
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  
+}
+button.primary-button::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: inherit;
+  
+  width: 102%;
+  height: 102%;
+  background: rgb(138, 179, 252);
+  /* background: linear-gradient(270deg, rgba(138,179,252,1) 0%, rgba(167,158,252,1) 100%); */
+  background: linear-gradient(
+    90deg,
+    rgba(167, 158, 252, 1) 20%,
+    rgba(138, 179, 252, 1) 80%
+  );
+  
+  top: 6px;
+  left: 4px;
+  
+
+}
+
+.primary-button:hover {
+
+  /* background: linear-gradient(
+    90deg,
+    rgba(167, 158, 252, 1) 20%,
+    rgba(138, 179, 252, 1) 80%
+  ); */
+  background: black;
+  color: #fff;
+  
+  transition: transform 1000ms;
+ }
+ .primary-button:hover::after {
+  /* top: 0px;
+  left: 0px; */
+  transform: translate(-6px, -5px);
+  transition: transform 400ms;
+ }
+
+
+
+
+
+/* ------------------ Program offerings ------------------ */
+
+.program-offerings{
+  margin-bottom: 236px;
+}
+
+.program-offerings h2 {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 61px;
+}
+.program-offerings p {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: var(--font-size-24);
+  width: 358px;
+  margin-top: 55px;
+}
+.program-offerings p span {
+  display: inline;
+  font-weight: 700;
+}
+
+.program-offerings .primary-button {
+ align-self: flex-start;
+}
+
+.program-offerings .small-row {
+  display: flex;
+}
+
+.program-offerings .small-row img {
+  filter: drop-shadow(4px 4px var(--accent-color2));
+  margin-right: 46px;
+}
+
+/* ------------------ UVU resources page ------------------ */
+
+.uvu-resource-page h1 {
+  font-size: 80px;
+  font-weight: 900;
+  margin-bottom: 46px;
+  margin-top: 0px;
+}
+.uvu-resource-page h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.uvu-resource-page h3 {
+  font-size: var(--font-size-24);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.uvu-resource-page .primary-button {
+  
+  padding-left: 4.5rem;
+  padding-right: 4.5rem;
+}
+
+.page-heading-group {
+  margin-bottom: 85px;
+  margin-top: 97px;
+}
+
+.page-heading-group p {
+  font-family: var(--secondary-font);
+  font-size: var(--font-size-24);
+  font-weight: var(--font-weight-semi-bold);
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.study-places-section {
+  margin-bottom: 95px;
+}
+.study-places-section p {
+  font-family: var(--secondary-font);
+  font-size: var(--font-size-24);
+  font-weight: var(--font-weight-regular);
+  margin-top: 0px;
+  margin-bottom: 54px;
+}
+
+.study-places-section h2 {
+  margin-bottom: 28px;
+}
+
+.study-places-section .row-wrapper {
+  gap: 2rem;
+}
+
+.study-places-card {
+  position: relative;
+  border: 1px solid var(--primary-dark-color);
+  /* filter: drop-shadow(14px 14px #79acfb); */
+  background-color: var(--primary-dark-color);
+  border-radius: 13px;
+  width: 537px;
+  padding-left: 36px;
+  padding-right: 36px;
+  padding-top: 38px;
+  padding-bottom: 55px;
+}
+.study-places-card hr{
+  margin-bottom:15px;
+}
+.study-places-card p {
+  font-size: var(--font-size-16);
+}
+
+.study-places-card::after{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: inherit;
+  
+  width: 102%;
+  height: 102%;
+  background: rgb(138, 179, 252);
+  /* background: linear-gradient(270deg, rgba(138,179,252,1) 0%, rgba(167,158,252,1) 100%); */
+  background: linear-gradient(
+    90deg,
+    rgba(167, 158, 252, 1) 20%,
+    rgba(138, 179, 252, 1) 80%
+  );
+  
+  top: 6px;
+  left: 4px;
+  
+}
+
+
+
+.product-team-section {
+  margin-bottom: 106px;
+}
+.product-team-section h2 {
+  margin-bottom: 16px;
+}
+.product-team-section p {
+  font-family: var(--secondary-font);
+  font-size: var(--font-size-24);
+  font-weight: var(--font-weight-regular);
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.product-team-section ol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-family: var(--secondary-font);
+  font-size: var(--font-size-24);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.product-team-section ol h3 {
+  font-family: var(--secondary-font);
+}
+
+.product-team-section ol li {
+}
+.product-team-section ul li {
+  font-family: var(--secondary-font);
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-regular);
+}
+
+.product-team-section .row-wrapper {
+  margin-bottom: 48px;
+  margin-top: 56px;
+}
+
+.product-team-section .primary-button {
+  margin-top: 60px;
+  margin-bottom: 0px;
+}
+
+.professor-reccomendations-section h2 {
+  margin-bottom: 45px;
+}
+/* ------------------ Portfolio Page------------------ */
+.ideas-card{
+  position: relative;
+ 
+  border: 1px solid var(--primary-dark-color);
+  /* filter: drop-shadow(14px 14px #79acfb); */
+  background-color: var(--light-color);
+  border-radius: 13px;
+  max-width: 428px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 38px;
+  padding-bottom: 36px
+
+ 
+}
+
+.ideas-card::after{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: inherit;
+  
+  width: 102%;
+  height: 102%;
+  background: rgb(138, 179, 252);
+  /* background: linear-gradient(270deg, rgba(138,179,252,1) 0%, rgba(167,158,252,1) 100%); */
+  background: linear-gradient(
+    90deg,
+    rgba(167, 158, 252, 1) 20%,
+    rgba(138, 179, 252, 1) 80%
+  );
+  
+  top: 6px;
+  left: 4px;
+  
+}
+.ideas-card hr{
+  margin-bottom: 25px;
+}
+
+.ideas-card .fa-ul{
+  margin-left: 2em ;
+}
+.ideas-card ul li{
+  max-width: 318px;
+  margin-bottom: 20px;
+  padding-left: 0px;
+
+}
+
+/* ------------------ Networking Page------------------ */
+
+.getting-started-section h2{
+
+  margin-bottom: 24px;
+}
+.getting-started-section h3{
+
+  font-weight: var(--font-weight-semi-bold);
+  font-size: 36px;
+  margin-bottom: 17px;
+}
+
+.getting-started-section p{
+  font-weight: var(--font-weight-regular);
+  font-family: var(--secondary-font);
+  font-size: var(--font-size-24);
+  margin-top: 0px;
+  margin-bottom: 50px; 
+
+}
+.comunities-section{
+  margin-bottom: 176px;
+}
+.discover-mentors{
+  margin-bottom: 50px;
+}
+
+.discover-mentors h3{
+  font-weight: var(--font-weight-semi-bold);
+  font-size: 36px;
+  margin-bottom: 17px;
+}
+.discover-mentors h4{
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-24);
+  display: inline;
+}
+.discover-mentors p{
+  font-weight: var(--font-weight-regular);
+  font-family: var(--secondary-font);
+  font-size: var(--font-size-24);
+}
+.discover-mentors ol li{
+  font-weight: var(--font-weight-regular);
+  font-family: var(--secondary-font);
+  font-size: var(--font-size-24);
+  /* font-weight: var(--font-weight-bold); */
+  margin-bottom: 30px;
+
+}
+
+footer hr {
+  border:none; 
+  border-top:1px var(--primary-dark-color) solid; height: 1px;
+  max-width: 1365px;
+  margin-left: auto;
+  margin-right:auto;
+}
+footer .footer-content {
+  text-align: center;
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-regular);
+  font-family: var(--secondary-font);
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
