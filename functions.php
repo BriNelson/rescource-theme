@@ -30,10 +30,10 @@ function my_first_post_type()
 
 }
 add_action('init', 'my_first_post_type');
+// End custom post configuration
 
+// Removes items from 
 function remove_admin_items() {
-    // Remove the 'Links' menu
-    
     
     // Remove the 'Posts' menu
     remove_menu_page('edit.php');
