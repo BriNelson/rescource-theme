@@ -230,7 +230,7 @@ Template Name: UX Extended Education
         <div class="swiper mySwiper">
           <div class="category-heading-wrapper">
             <h3>
-              <?php echo $test; ?>
+              Iconography
             </h3>
             <div class="control-wrapper">
               <div class="swiper-button-prev"></div>

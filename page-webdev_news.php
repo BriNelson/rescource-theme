@@ -82,7 +82,7 @@ Template Name: Webdev News
 		<!-- end of resource library heading -->
 
 
-		<!------------------- Research & Development --------------------->
+		<!------------------- web dev news grid --------------------->
 
 
 
