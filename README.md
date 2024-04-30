@@ -2,7 +2,10 @@
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ddcce3e756c670581b03ef38c5725c0aa06ae92d
 # Resource Theme
 for UVU product resource hub
 
