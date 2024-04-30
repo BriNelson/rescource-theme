@@ -7,9 +7,7 @@ Template Name: Webdev Featured
 <?php get_header(); ?>
 
 
-<?php
-$test = "Iconography" // this needs to be fixed
-  ?>
+
 
 
 <div class="body-wrapper">
@@ -236,7 +234,7 @@ $test = "Iconography" // this needs to be fixed
         <div class="swiper mySwiper">
           <div class="category-heading-wrapper">
             <h3>
-              <?php echo $test; ?>
+              Iconography
             </h3>
             <div class="control-wrapper">
               <div class="swiper-button-prev"></div>
@@ -433,12 +431,12 @@ $test = "Iconography" // this needs to be fixed
       </div> <!-- row end -->
 
 
-      
 
-      
-      
-      
-      
+
+
+
+
+
       <!------------------- UX Templates --------------------->
 
 

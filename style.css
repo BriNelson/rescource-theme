@@ -65,7 +65,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 
-silverstone
+
 
 /* ------------------- Root variables ------------------ */
 
@@ -146,7 +146,7 @@ h3 {
   justify-content: space-between;
   margin-bottom: 5px;
 }
-/* ----------------- Navigations ------------------ */
+/* ----------------- MAIN Navigations ------------------ */
 .nav-wrapper {
   border-bottom: 1px solid #333333;
   display: grid;
@@ -247,6 +247,16 @@ padding-inline: 1rem;
 
 /* -------------------------------Resources section --------------------------------*/
 
+/* Controls the resources that aren't */
+.resource-grid-wrapper{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-between;
+  gap: 3.125rem 1rem;
+  margin-bottom: 166px;
+}
+
 /* ------------------- Resource library Heading ------------------ */
 .resource-library-heading{
   margin-top: 97px;
@@ -294,6 +304,12 @@ padding-inline: 1rem;
 }
 
 .resource-row-wrapper{
+  /* display: flex;
+  flex-wrap: wrap;
+  gap : 1.271rem; */
+/* display: grid;
+gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr ; */
 margin-bottom: 75px;
 }
 
@@ -331,7 +347,7 @@ margin-bottom: 75px;
 .card {
   display: flex;
   flex-direction: column;
-  max-width: 259px;
+  /* max-width: 259px; */
   min-height: 420px;
   font-size: var(--font-size-14);
   font-family: "Montserrat", sans-serif;
@@ -340,13 +356,13 @@ margin-bottom: 75px;
 }
 
 .card img {
-  max-width: 259px;
-  max-height: 247px;
+  /* max-width: 280px; */
+  max-height: 280px;
   min-width: 259px;
   min-height: 247px;
   border: 1px solid var(--primary-dark-color);
   border-radius: 13px;
-  overflow: hidden;
+  /* overflow: hidden; */
   margin-bottom: 23px;
 }
 
@@ -779,7 +795,7 @@ button.primary-button::after {
   position: relative;
   border: 1px solid var(--primary-dark-color);
   /* filter: drop-shadow(14px 14px #79acfb); */
-  background-color: var(--primary-dark-color);
+  background-color: var(--light-color);
   border-radius: 13px;
   width: 537px;
   padding-left: 36px;

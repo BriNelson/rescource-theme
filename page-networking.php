@@ -52,8 +52,8 @@ Template Name: Networking
 
                             'post_type' => 'resources',
                             'post_status' => 'publish',
-                            'category_name' => 'research-and-testing'
-
+                            'category_name' => 'community-ux, community-web-development',// This controlls which category to show
+                            'posts_per_page' => -1// This controlls how many posts to show                            
                         );
 
 
@@ -101,6 +101,7 @@ Template Name: Networking
         <p>Mentorship can also feel like an abstract concept,
             so how do you go about making these kinds of connections? Here’s some advice:
         </p>
+        <br>
         <ol>
             <li>
                 <h4>Introduce yourself.</h4> It’s best to go to one of these industry leaders with an introduction of
@@ -134,7 +135,7 @@ Template Name: Networking
     <section>
         <!--------------------- Local Dev Leaders slider  ----------------------  -->
         <div class="resource-sliders-wrapper">
-            
+
             <div class="resource-row-wrapper">
 
 
@@ -158,7 +159,7 @@ Template Name: Networking
 
                             'post_type' => 'resources',
                             'post_status' => 'publish',
-                            'category_name' => 'research-and-testing'
+                            'category_name' => 'local-leaders-web-development'
 
                         );
 
@@ -202,65 +203,65 @@ Template Name: Networking
             <div class="resource-row-wrapper">
 
 
-<div class="swiper mySwiper">
-    <div class="category-heading-wrapper">
-        <h3>Local Design Leaders</h3>
-        <div class="control-wrapper">
-            <div class="swiper-button-prev"></div>
-            <div class="counter-test"></div>
-            <div class="swiper-button-next"></div>
-        </div>
-    </div>
-    <hr>
+                <div class="swiper mySwiper">
+                    <div class="category-heading-wrapper">
+                        <h3>Local Design Leaders</h3>
+                        <div class="control-wrapper">
+                            <div class="swiper-button-prev"></div>
+                            <div class="counter-test"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                    <hr>
 
-    <div class="swiper-wrapper">
-
-
-        <?php
-
-        $args = array(
-
-            'post_type' => 'resources',
-            'post_status' => 'publish',
-            'category_name' => 'research-and-testing'
-
-        );
+                    <div class="swiper-wrapper">
 
 
+                        <?php
 
-        $loop = new WP_Query($args);
+                        $args = array(
 
+                            'post_type' => 'resources',
+                            'post_status' => 'publish',
+                            'category_name' => 'local-leaders-ux'
 
-        if ($loop->have_posts()):
-            while ($loop->have_posts()):
-                $loop->the_post(); ?>
-
-                <div class="swiper-slide">
-                    <div class="card">
-
-
-                        <?php if (has_post_thumbnail()): ?>
-                            <img src="<?php the_post_thumbnail_url('blog-small'); ?>" alt="<?php the_title(); ?>">
-                        <?php endif; ?>
+                        );
 
 
-                        <h4>
-                            <?php the_title(); ?>
-                        </h4>
-                        <?php the_content(); ?>
-                        <a href="<?php echo get_post_meta(get_the_ID(), 'Resource Link', true); ?>">Learn More
-                            →</a>
+
+                        $loop = new WP_Query($args);
+
+
+                        if ($loop->have_posts()):
+                            while ($loop->have_posts()):
+                                $loop->the_post(); ?>
+
+                                <div class="swiper-slide">
+                                    <div class="card">
+
+
+                                        <?php if (has_post_thumbnail()): ?>
+                                            <img src="<?php the_post_thumbnail_url('blog-small'); ?>" alt="<?php the_title(); ?>">
+                                        <?php endif; ?>
+
+
+                                        <h4>
+                                            <?php the_title(); ?>
+                                        </h4>
+                                        <?php the_content(); ?>
+                                        <a href="<?php echo get_post_meta(get_the_ID(), 'Resource Link', true); ?>">Learn More
+                                            →</a>
+
+                                    </div>
+                                </div>
+                            <?php endwhile; else: endif; ?>
+
+
 
                     </div>
+
                 </div>
-            <?php endwhile; else: endif; ?>
-
-
-
-    </div>
-
-</div>
-</div> <!-- row end -->
+            </div> <!-- row end -->
         </div>
 
     </section>

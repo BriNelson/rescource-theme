@@ -88,6 +88,7 @@ $test = "Iconography" // this needs to be fixed
     <!-- end of resource library heading -->
 
 
+    
     <!------------------- Research & Development --------------------->
 
 
@@ -290,6 +291,223 @@ $test = "Iconography" // this needs to be fixed
 
         </div><!-- swiper end -->
       </div> <!-- row end -->
+
+
+
+
+
+      <!------------------- Color Section --------------------->
+
+
+
+
+
+      <div class="resource-row-wrapper">
+
+
+        <div class="swiper mySwiper">
+          <div class="category-heading-wrapper">
+            <h3>
+              Color
+            </h3>
+            <div class="control-wrapper">
+              <div class="swiper-button-prev"></div>
+              <div class="counter-test"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+          <hr>
+
+          <div class="swiper-wrapper">
+            <?php
+            $args = array(
+
+              'post_type' => 'resources',
+              'post_status' => 'publish',
+              'category_name' => 'color'
+
+            );
+
+
+
+            $third_loop = new WP_Query($args);
+
+
+            if ($third_loop->have_posts()):
+              while ($third_loop->have_posts()):
+                $third_loop->the_post(); ?>
+
+            <div class="swiper-slide">
+              <div class="card">
+
+
+                <?php if (has_post_thumbnail()): ?>
+                <img src="<?php the_post_thumbnail_url('blog-small'); ?>" alt="<?php the_title(); ?>">
+                <?php endif; ?>
+
+
+                <h4>
+                  <?php the_title(); ?>
+                </h4>
+                <?php the_content(); ?><!-- This grabs the link put in on the wordpress side -->
+
+
+
+                    <a href="<?php echo get_post_meta(get_the_ID(), 'Resource Link', true); ?>">Learn More →</a>
+
+                  </div>
+                </div>
+              <?php endwhile; else: endif; ?>
+          </div><!-- swiper wrapper end -->
+
+        </div><!-- swiper end -->
+      </div> <!-- row end -->
+
+
+
+
+      <!------------------- UX AI Resources --------------------->
+
+
+
+
+
+      <div class="resource-row-wrapper">
+
+
+        <div class="swiper mySwiper">
+          <div class="category-heading-wrapper">
+            <h3>
+              AI Resources
+            </h3>
+            <div class="control-wrapper">
+              <div class="swiper-button-prev"></div>
+              <div class="counter-test"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+          <hr>
+
+          <div class="swiper-wrapper">
+            <?php
+            $args = array(
+
+              'post_type' => 'resources',
+              'post_status' => 'publish',
+              'category_name' => 'ux-ai-resources'
+
+            );
+
+
+
+            $third_loop = new WP_Query($args);
+
+
+            if ($third_loop->have_posts()):
+              while ($third_loop->have_posts()):
+                $third_loop->the_post(); ?>
+
+            <div class="swiper-slide">
+              <div class="card">
+
+
+                <?php if (has_post_thumbnail()): ?>
+                <img src="<?php the_post_thumbnail_url('blog-small'); ?>" alt="<?php the_title(); ?>">
+                <?php endif; ?>
+
+
+                <h4>
+                  <?php the_title(); ?>
+                </h4>
+                <?php the_content(); ?><!-- This grabs the link put in on the wordpress side -->
+
+
+
+                    <a href="<?php echo get_post_meta(get_the_ID(), 'Resource Link', true); ?>">Learn More →</a>
+
+                  </div>
+                </div>
+              <?php endwhile; else: endif; ?>
+          </div><!-- swiper wrapper end -->
+
+        </div><!-- swiper end -->
+      </div> <!-- row end -->
+
+
+
+
+
+
+
+
+      <!------------------- UX Templates --------------------->
+
+
+
+
+
+      <div class="resource-row-wrapper">
+
+
+        <div class="swiper mySwiper">
+          <div class="category-heading-wrapper">
+            <h3>
+              Templates
+            </h3>
+            <div class="control-wrapper">
+              <div class="swiper-button-prev"></div>
+              <div class="counter-test"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+          <hr>
+
+          <div class="swiper-wrapper">
+            <?php
+            $args = array(
+
+              'post_type' => 'resources',
+              'post_status' => 'publish',
+              'category_name' => 'templates'
+
+            );
+
+
+
+            $third_loop = new WP_Query($args);
+
+
+            if ($third_loop->have_posts()):
+              while ($third_loop->have_posts()):
+                $third_loop->the_post(); ?>
+
+            <div class="swiper-slide">
+              <div class="card">
+
+
+                <?php if (has_post_thumbnail()): ?>
+                <img src="<?php the_post_thumbnail_url('blog-small'); ?>" alt="<?php the_title(); ?>">
+                <?php endif; ?>
+
+
+                <h4>
+                  <?php the_title(); ?>
+                </h4>
+                <?php the_content(); ?><!-- This grabs the link put in on the wordpress side -->
+
+
+
+                    <a href="<?php echo get_post_meta(get_the_ID(), 'Resource Link', true); ?>">Learn More →</a>
+
+                  </div>
+                </div>
+              <?php endwhile; else: endif; ?>
+          </div><!-- swiper wrapper end -->
+
+        </div><!-- swiper end -->
+      </div> <!-- row end -->
+
+
     </div><!-- sliders wrapper end -->
 
   </div><!-- webdev-resources-wrapper end -->

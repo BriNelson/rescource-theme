@@ -112,7 +112,7 @@ Template Name: portfolio
 
               'post_type' => 'resources',
               'post_status' => 'publish',
-              'category_name' => 'research-and-testing'
+              'category_name' => 'portfolio-articles'
 
             );
 
@@ -176,7 +176,7 @@ Template Name: portfolio
 
               'post_type' => 'resources',
               'post_status' => 'publish',
-              'category_name' => 'research-and-testing'
+              'category_name' => 'website-builders'
 
             );
 
@@ -241,7 +241,7 @@ Template Name: portfolio
 
               'post_type' => 'resources',
               'post_status' => 'publish',
-              'category_name' => 'research-and-testing'
+              'category_name' => 'portfolio-articles'
 
             );
 

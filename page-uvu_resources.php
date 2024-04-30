@@ -102,7 +102,7 @@ Template Name: Uvu Resources
 
                 <div class="swiper mySwiper">
                     <div class="category-heading-wrapper">
-                        <h3>Research & Testing</h3>
+                        <h3>Dev Professors</h3>
                         <div class="control-wrapper">
                             <div class="swiper-button-prev"></div>
                             <div class="counter-test"></div>
@@ -166,7 +166,7 @@ Template Name: Uvu Resources
 
 <div class="swiper mySwiper">
     <div class="category-heading-wrapper">
-        <h3>Research & Testing</h3>
+        <h3>UX Professors</h3>
         <div class="control-wrapper">
             <div class="swiper-button-prev"></div>
             <div class="counter-test"></div>
