@@ -1,6 +1,10 @@
 
+
+
+
+
 # Resource Theme
-for UVU product resourse hub
+for UVU product resource hub
 
 This is a custom Wordpress custom theme for a potential UVU resource website
 
@@ -21,6 +25,46 @@ Because I was locked into shared bluhost hosting, running any kind of server sid
   - tempting, better resources even for a login/auth - still a lot of learning time
 - Wordpress custom theme
   - good resources, less learning, Wordpress is kind of a pain
+
+### Chosen Solution: Wordpress
+
+Wordpress ended up being chosen as it seemed like the least time consuming option. I had some experience in wordpress and I thought maybe I could make it would work 
+
+## Important functions
+
+
+
+### Custom word press post
+```
+function my_first_post_type()
+{
+	add_theme_support('post-thumbnails');
+	$args = array(
+
+
+		'labels' => array(
+
+			'name' => 'Resources',
+			'singular_name' => 'Resource',
+		),
+		'hierarchical' => true,
+		'public' => true,
+		'has_archive' => true,
+		'menu_icon' => 'dashicons-images-alt2',
+		'supports' => array('title', 'editor', 'thumbnail', 'post-formats', 'custom-fields'),
+		'taxonomies' => array('category'),
+		//'rewrite' => array('slug' => 'resources'),	
+
+	);
+
+
+	register_post_type('Resources', $args);
+
+
+}
+add_action('init', 'my_first_post_type');
+
+```
 
 
 
@@ -47,7 +91,7 @@ Because I was locked into shared bluhost hosting, running any kind of server sid
 - Top Nav selection doesn't stay on "UX" or "webdev" when moving through pages on sub menu (probably needs to be fixed with JS)
 
 
-  ## Important functions 
+  
 
 
   ## help links
