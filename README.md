@@ -167,6 +167,7 @@ var swiper = new Swiper(".mySwiper", {
 	});
     
 ```
+<br>
 ## Work that needs to be done still (As of April 2024)
 - Networking Slide Show
 - Vetting and adding more and better resources
@@ -193,7 +194,7 @@ var swiper = new Swiper(".mySwiper", {
 - Manual install of WordPress on the part of bluehost Dr Cheneys bluehost that was provided for us(probably need to work with him)
 
 
-  ## Getting Started
+  ## Getting Started With The Devlopment
 
   1. Get a local install of WordPress [how to](https://www.youtube.com/watch?v=n3EcEYFgyrQ&list=PLgFB6lmeXFOpHnNmQ4fdIYA5X_9XhjJ9)
   2. Import Migration file to your local install [how to](https://www.youtube.com/watch?v=0_HeL-fKXho&t=307s)
@@ -205,6 +206,8 @@ var swiper = new Swiper(".mySwiper", {
 ## Helpful Links
 
 Project Figma (iteration 3) https://www.figma.com/file/SZfkb5URSxmcoGCAmpVZHA/Product-Resource-Hub-Website?type=design&node-id=0-1&mode=design&t=d9TnZw3QXLs4OnKW-0
+
+Swiper js used for carousels https://swiperjs.com/
 
 ### hosting and test server
 My test server https://oak.tak.mybluehost.me/  WordPress admin https://oak.tak.mybluehost.me/admin
