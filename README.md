@@ -226,9 +226,9 @@ Basic custom WordPress theme (this is the one I mostly used) https://www.youtube
   
 How to customize and make a custom wordpress loop: https://www.youtube.com/watch?v=-XOBJm2SObQ&list=WL&index=13&t=593s
 
-
 In-depth custom WordPress theme https://www.youtube.com/watch?v=-h7gOJbIpmo&t=5615s
 
+<br>
 ### How to use the wordpress back end to manage the site
 
 How to add a resource in and give it categories https://youtu.be/FtVwv78LjgQ
