@@ -2,10 +2,7 @@
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> ddcce3e756c670581b03ef38c5725c0aa06ae92d
 # Resource Theme
 for UVU product resource hub
 
@@ -37,7 +34,9 @@ Wordpress ended up being chosen as it seemed like the least time consuming optio
 
 
 
-### Custom word press post
+### Custom WordPress post
+The word press custom post works similar to blog post except you can change it to fit any of your needs. The snippet below (found in functions.php) adds a custom post. You can control the name of post and it's different properties through this funciton. You can also reuse it if you want to add a new custom post you just have to change the function name and change the names in the "labels" array.
+
 ```
 function my_first_post_type()
 {
@@ -46,10 +45,11 @@ function my_first_post_type()
 
 
 		'labels' => array(
-
+      <!-- Names the custom post -->
 			'name' => 'Resources',
 			'singular_name' => 'Resource',
 		),
+    <!-- controls the different properties of the loop -->
 		'hierarchical' => true,
 		'public' => true,
 		'has_archive' => true,
@@ -66,11 +66,82 @@ function my_first_post_type()
 
 }
 add_action('init', 'my_first_post_type');
-
 ```
 
+### Wordpress Loop
+This word press loop allows you to show all the post in a select category or categories. If you want to show more resources you can reuse this loop in other places and change the category or add categories to existing loops.
+
+```
+ $args = array(
+
+                'post_type' => 'resources',  <!-- custom post name -->
+                'post_status' => 'publish',
+                'category_name' => 'news-sources-web-development', <!-- category(s) that the loop loops through -->
+                'posts_per_page' => -1  <!-- amount of post shown (negative -1 means no limit) -->
+
+            );
 
 
+
+            $loop = new WP_Query($args);
+
+
+            if ($loop->have_posts()):
+                while ($loop->have_posts()):
+                    $loop->the_post(); ?>
+
+
+            
+
+
+                <?php if (has_post_thumbnail()): ?><!-- pulls the featured image if its there -->
+                <img src="<?php the_post_thumbnail_url('blog-small'); ?>" alt="<?php the_title(); ?>">
+                <?php endif; ?>
+
+
+                <h4>
+                
+                    <?php the_title(); ?><!-- Pulls the title of the custom post -->
+                </h4>
+                <?php the_content(); ?><!-- Pulls the content -->
+                <a href="<?php echo get_post_meta(get_the_ID(), 'Resource Link', true); ?>">Learn More
+                    →</a>
+
+            
+
+            <?php endwhile; else: endif; ?><!-- end of WordPress loop  -->
+```
+
+### Wordpress Navigation
+The navigation is run through wordpress as well. They are initialized in the functions.php file then added into each page
+
+#### Initialize navigations in functions.php
+```
+add_theme_support('menus');
+
+register_nav_menus(
+	array(
+		'top-menu' => 'Top Menu Location',
+		'resource-menu' => 'Resource Menu Location',
+		'webdev-resource-menu' => 'Webdev Resource Menu Location',
+	)
+);
+```
+#### The navigation function found in each page
+```
+<?php
+        wp_nav_menu(
+
+          array(
+
+            'theme_location' => 'resource-menu',
+            'menu_class' => 'resource-menu',
+          )
+
+
+        );
+        ?>
+```
 ## Work that needs to be done still (As of April 2024)
 - Networking Slide Show
 - Vetting and adding more and better resources
