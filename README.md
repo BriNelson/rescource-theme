@@ -7,7 +7,7 @@
 for UVU product resource hub
 
 This is a custom Wordpress custom theme for a potential UVU resource website
-
+<br>
 ## Prerequisites for this project 
 The ability to save in resources(database)
 Some sort of login
