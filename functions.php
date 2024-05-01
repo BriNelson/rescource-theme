@@ -33,18 +33,21 @@ add_action('init', 'my_first_post_type');
 // End custom post configuration
 
 // Removes items from 
-function remove_admin_items() {
-    
-    // Remove the 'Posts' menu
-    remove_menu_page('edit.php');
+function remove_admin_items()
+{
 
-    // Remove the 'Themes' submenu 
-    remove_submenu_page('themes.php', 'themes.php');
+	// Remove the 'Posts' menu
+	remove_menu_page('edit.php');
+
+	// Remove the 'Themes' submenu 
+	remove_submenu_page('themes.php', 'themes.php');
 }
 
 // Hook the function to the admin_menu action hook
 add_action('admin_menu', 'remove_admin_items');
 
+
+// enqueue styles, adds styles to wordpress system
 function enqueue_my_styles()
 {
 	// Enqueue your stylesheet here
@@ -55,7 +58,10 @@ function enqueue_my_styles()
 // Hook into the 'wp_enqueue_scripts' action
 add_action('wp_enqueue_scripts', 'enqueue_my_styles');
 
-//Theme options
+
+
+
+// add menu support if needed
 add_theme_support('menus');
 
 register_nav_menus(
