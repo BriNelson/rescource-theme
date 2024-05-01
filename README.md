@@ -4,19 +4,21 @@
 
 
 # Resource Theme
-for UVU product resource hub
-
 This is a custom Wordpress custom theme for a potential UVU resource website
-<br>
-## Prerequisites for this project 
-The ability to save in resources(database)
-Some sort of login
-It has to run on bluehost shared hosting
-Cant incur any ongoing cost (database cost, hosting cost, and such)
 
+<br>
+
+## Prerequisites for this project 
+- The ability to save in resources(database)
+- Some sort of login
+- It has to run on bluehost shared hosting
+- Cant incur any ongoing cost (database cost, hosting cost, and such)
+
+<br>
 
 ## Solution chosen and why
 Because I was locked into shared bluhost hosting, running any kind of server side node related stuff will not work(as far as I can tell). This means no React/nextjs no node packages and a continuos api server would not work. Not incurring any ongoing cost not only caused me to be unable to change the hosting situation, it also made it difficult to find a database that would work with the prerequisites. 
+
 
 ### Potential options
 - Learn vanilla PHP and Mysql
@@ -28,7 +30,9 @@ Because I was locked into shared bluhost hosting, running any kind of server sid
 
 ### Chosen Solution: Wordpress
 
-Wordpress ended up being chosen as it seemed like the least time consuming option. I had some experience in wordpress and I thought maybe I could make it would work 
+Wordpress ended up being chosen as it seemed like the least time consuming option. I had some experience in wordpress and I thought maybe I could make it would work. 
+
+<br>
 
 ## Important functions
 
@@ -168,6 +172,7 @@ var swiper = new Swiper(".mySwiper", {
     
 ```
 <br>
+
 ## Work that needs to be done still (As of April 2024)
 - Networking Slide Show
 - Vetting and adding more and better resources
@@ -193,6 +198,7 @@ var swiper = new Swiper(".mySwiper", {
 - Some form of Lazy loading would be nice
 - Manual install of WordPress on the part of bluehost Dr Cheneys bluehost that was provided for us(probably need to work with him)
 
+<br>
 
   ## Getting Started With The Devlopment
 
@@ -202,6 +208,7 @@ var swiper = new Swiper(".mySwiper", {
   
   You Should be able to work on the theme and do anything with it. You can also clone the theme from here but it will not keep any of the resource data/photos
 
+<br>
 
 ## Helpful Links
 
@@ -209,14 +216,16 @@ Project Figma (iteration 3) https://www.figma.com/file/SZfkb5URSxmcoGCAmpVZHA/Pr
 
 Swiper js used for carousels https://swiperjs.com/
 
-### hosting and test server
+<br>
+
+### Hosting and test server
 My test server https://oak.tak.mybluehost.me/  WordPress admin https://oak.tak.mybluehost.me/admin
 
 The subdomain we were given by Paul Cheney(nothing on it yet ) https://hub.dgmuvu.com/
 
+<br>
 
-
-### how to wordpress development stuff
+### How to wordpress development stuff
 How to setup a local Wordpress install(Easiest way to work on the project it in my opinion)https://www.youtube.com/watch?v=n3EcEYFgyrQ&list=PLgFB6lmeXFOpHnNmQ4fdIYA5X_9XhjJ9d
 
 How to manually install WordPress:(fast version) https://www.youtube.com/watch?v=0gjLVvr9pc8&t=2s (more in-depth)https://www.udemy.com/course/custom-theme-creation-for-wordpress/learn/lecture/12372274#overview
