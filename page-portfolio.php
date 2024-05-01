@@ -112,7 +112,7 @@ Template Name: portfolio
 
               'post_type' => 'resources',
               'post_status' => 'publish',
-              'category_name' => 'portfolio-articles'
+              'category_name' => 'example-portfolios'
 
             );
 

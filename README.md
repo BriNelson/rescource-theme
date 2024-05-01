@@ -142,6 +142,31 @@ register_nav_menus(
         );
         ?>
 ```
+## Slideshow and [Swiper.js](https://swiperjs.com/)
+The slideshows and carousels are all run by [Swiper.js](https://swiperjs.com/) a popular javascript slider. There are currently two different versions 'swipers' running on the site and you can add more by initializing more. The sliders are initialized at the bottom of footer.php
+```
+var swiper = new Swiper(".mySwiper", {
+	navigation: {
+		
+		hideOnClick: true,
+	  nextEl: ".swiper-button-next",
+	  prevEl: ".swiper-button-prev",
+	},
+	slidesPerView: 4,
+      spaceBetween: 17,
+	  observer: true,
+            observeParents: true
+    
+  });
+
+
+  var swiper2 = new Swiper(".mySwiper2", {
+	pagination: {
+        el: ".swiper-pagination",
+      },
+	});
+    
+```
 ## Work that needs to be done still (As of April 2024)
 - Networking Slide Show
 - Vetting and adding more and better resources
@@ -160,15 +185,47 @@ register_nav_menus(
   - The nav width needs to be limited, the nav layout could be worked out better overall
   - Margin between footer and bottom of content not correct across all pages
   - There is some bad namings the css
-  - Could broken up and used with sass to make it not so long.
+  - CSS file could be broken up and used with sass to make it not so long.
   - Minify css
+  - svg stars on front page need help
 - Top Nav selection doesn't stay on "UX" or "webdev" when moving through pages on sub menu (probably needs to be fixed with JS)
+- Some form of Lazy loading would be nice
+- Manual install of WordPress on the part of bluehost Dr Cheneys bluehost that was provided for us(probably need to work with him)
 
 
+  ## Getting Started
+
+  1. Get a local install of WordPress [how to](https://www.youtube.com/watch?v=n3EcEYFgyrQ&list=PLgFB6lmeXFOpHnNmQ4fdIYA5X_9XhjJ9)
+  2. Import Migration file to your local install [how to](https://www.youtube.com/watch?v=0_HeL-fKXho&t=307s)
+  3. Once file is migrated open the theme location file with your editor  
   
+  You Should be able to work on the theme and do anything with it. You can also clone the theme from here but it will not keep any of the resource data/photos
 
 
-  ## help links
+  ## Helpful Links
 
+  Project Figma (iteration 3) https://www.figma.com/file/SZfkb5URSxmcoGCAmpVZHA/Product-Resource-Hub-Website?type=design&node-id=0-1&mode=design&t=d9TnZw3QXLs4OnKW-0
+
+  ### hosting and test server
+  My test server https://oak.tak.mybluehost.me/  WordPress admin https://oak.tak.mybluehost.me/admin
+
+  The subdomain we were given by Paul Cheney(nothing on it yet ) https://hub.dgmuvu.com/
+
+### how to wordpress development stuff
+ How to setup a local Wordpress install(Easiest way to work on the project it in my opinion)https://www.youtube.com/watch?v=n3EcEYFgyrQ&list=PLgFB6lmeXFOpHnNmQ4fdIYA5X_9XhjJ9d
+
+  How to manually install WordPress:(fast version) https://www.youtube.com/watch?v=0gjLVvr9pc8&t=2s (more in-depth)https://www.udemy.com/course/custom-theme-creation-for-wordpress/learn/lecture/12372274#overview
+
+ How to migrate wordpress install: https://www.youtube.com/watch?v=0_HeL-fKXho&t=307s
+
+  Basic custom WordPress theme (this is the one I mostly used) https://www.youtube.com/watch?v=n3EcEYFgyrQ&list=PLgFB6lmeXFOpHnNmQ4fdIYA5X_9XhjJ9d
   
+  
+  How to customize and make a custom wordpress loop: https://www.youtube.com/watch?v=-XOBJm2SObQ&list=WL&index=13&t=593s
 
+
+  In-depth custom WordPress theme https://www.youtube.com/watch?v=-h7gOJbIpmo&t=5615s
+
+  ### how to use the wordpress back end to manage the site
+
+  How to add a resource in and give it categories https://youtu.be/FtVwv78LjgQ
