@@ -202,30 +202,30 @@ var swiper = new Swiper(".mySwiper", {
   You Should be able to work on the theme and do anything with it. You can also clone the theme from here but it will not keep any of the resource data/photos
 
 
-  ## Helpful Links
+## Helpful Links
 
-  Project Figma (iteration 3) https://www.figma.com/file/SZfkb5URSxmcoGCAmpVZHA/Product-Resource-Hub-Website?type=design&node-id=0-1&mode=design&t=d9TnZw3QXLs4OnKW-0
+Project Figma (iteration 3) https://www.figma.com/file/SZfkb5URSxmcoGCAmpVZHA/Product-Resource-Hub-Website?type=design&node-id=0-1&mode=design&t=d9TnZw3QXLs4OnKW-0
 
-  ### hosting and test server
-  My test server https://oak.tak.mybluehost.me/  WordPress admin https://oak.tak.mybluehost.me/admin
+### hosting and test server
+My test server https://oak.tak.mybluehost.me/  WordPress admin https://oak.tak.mybluehost.me/admin
 
-  The subdomain we were given by Paul Cheney(nothing on it yet ) https://hub.dgmuvu.com/
+The subdomain we were given by Paul Cheney(nothing on it yet ) https://hub.dgmuvu.com/
 
 ### how to wordpress development stuff
- How to setup a local Wordpress install(Easiest way to work on the project it in my opinion)https://www.youtube.com/watch?v=n3EcEYFgyrQ&list=PLgFB6lmeXFOpHnNmQ4fdIYA5X_9XhjJ9d
+How to setup a local Wordpress install(Easiest way to work on the project it in my opinion)https://www.youtube.com/watch?v=n3EcEYFgyrQ&list=PLgFB6lmeXFOpHnNmQ4fdIYA5X_9XhjJ9d
 
-  How to manually install WordPress:(fast version) https://www.youtube.com/watch?v=0gjLVvr9pc8&t=2s (more in-depth)https://www.udemy.com/course/custom-theme-creation-for-wordpress/learn/lecture/12372274#overview
+How to manually install WordPress:(fast version) https://www.youtube.com/watch?v=0gjLVvr9pc8&t=2s (more in-depth)https://www.udemy.com/course/custom-theme-creation-for-wordpress/learn/lecture/12372274#overview
 
- How to migrate wordpress install: https://www.youtube.com/watch?v=0_HeL-fKXho&t=307s
+How to migrate wordpress install: https://www.youtube.com/watch?v=0_HeL-fKXho&t=307s
 
-  Basic custom WordPress theme (this is the one I mostly used) https://www.youtube.com/watch?v=n3EcEYFgyrQ&list=PLgFB6lmeXFOpHnNmQ4fdIYA5X_9XhjJ9d
+Basic custom WordPress theme (this is the one I mostly used) https://www.youtube.com/watch?v=n3EcEYFgyrQ&list=PLgFB6lmeXFOpHnNmQ4fdIYA5X_9XhjJ9d
   
   
-  How to customize and make a custom wordpress loop: https://www.youtube.com/watch?v=-XOBJm2SObQ&list=WL&index=13&t=593s
+How to customize and make a custom wordpress loop: https://www.youtube.com/watch?v=-XOBJm2SObQ&list=WL&index=13&t=593s
 
 
-  In-depth custom WordPress theme https://www.youtube.com/watch?v=-h7gOJbIpmo&t=5615s
+In-depth custom WordPress theme https://www.youtube.com/watch?v=-h7gOJbIpmo&t=5615s
 
-  ### how to use the wordpress back end to manage the site
+### How to use the wordpress back end to manage the site
 
-  How to add a resource in and give it categories https://youtu.be/FtVwv78LjgQ
+How to add a resource in and give it categories https://youtu.be/FtVwv78LjgQ
