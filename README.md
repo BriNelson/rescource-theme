@@ -214,6 +214,8 @@ My test server https://oak.tak.mybluehost.me/  WordPress admin https://oak.tak.m
 
 The subdomain we were given by Paul Cheney(nothing on it yet ) https://hub.dgmuvu.com/
 
+
+
 ### how to wordpress development stuff
 How to setup a local Wordpress install(Easiest way to work on the project it in my opinion)https://www.youtube.com/watch?v=n3EcEYFgyrQ&list=PLgFB6lmeXFOpHnNmQ4fdIYA5X_9XhjJ9d
 
